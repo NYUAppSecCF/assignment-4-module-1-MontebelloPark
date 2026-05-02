@@ -22,10 +22,10 @@ jobs:
     
 #    - name: Setup Android SDK
 #      uses: android-actions/setup-android@v2
-    - name: cd to code location (GiftcardSite)
-      run: cd ./GiftcardSite
+#    - name: cd to code location (GiftcardSite)
+#      run: cd ./GiftcardSite
     - name: Grant execute permission for gradlew
       run: chmod +x GiftcardSite/gradlew
     - name: Build with Gradle
-      run: ./gradlew build
+      run: ./GiftcardSite/gradlew build
 
