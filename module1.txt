@@ -15,5 +15,10 @@ Cleanup Intents & manifest.
 * Change var intent in SecondFragment to mirror that in ThirdFragment
 * Cleanup unused imports
 
+# Phase 2
+Secure backend communications
+* update all the URIs to https
+* cleanup imports as I edit filters
+
 
 

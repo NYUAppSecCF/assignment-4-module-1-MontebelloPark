@@ -1,7 +1,7 @@
 package com.example.giftcardsite
 
 import android.content.Intent
-import android.net.Uri
+//import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
+//import androidx.navigation.fragment.findNavController
 import com.example.giftcardsite.api.model.LoginInfo
 import com.example.giftcardsite.api.model.User
 import com.example.giftcardsite.api.service.UserInterface
@@ -43,7 +43,7 @@ class ThirdFragment : Fragment() {
             var username : String = view.findViewById<EditText>(R.id.username).text.toString()
             var password : String = view.findViewById<EditText>(R.id.registerPassword).text.toString()
 
-            var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("http://appsec.moyix.net").addConverterFactory(
+            var builder: Retrofit.Builder = Retrofit.Builder().baseUrl("https://appsec.moyix.net").addConverterFactory(
                 GsonConverterFactory.create())
             var retrofit: Retrofit = builder.build()
             var client: UserInterface = retrofit.create(UserInterface::class.java)
