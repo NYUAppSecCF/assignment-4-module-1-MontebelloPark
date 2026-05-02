@@ -8,8 +8,11 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: ./GiftcardSite
 
     steps:
     - uses: actions/checkout@v4
@@ -22,10 +25,8 @@ jobs:
     
 #    - name: Setup Android SDK
 #      uses: android-actions/setup-android@v2
-#    - name: cd to code location (GiftcardSite)
-#      run: cd ./GiftcardSite
     - name: Grant execute permission for gradlew
-      run: chmod +x GiftcardSite/gradlew
+      run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./GiftcardSite/gradlew build
+      run: ./gradlew build
 
