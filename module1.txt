@@ -20,5 +20,10 @@ Secure backend communications
 * update all the URIs to https
 * cleanup imports as I edit filters
 
+# Phase 3
+Stop being creepy - remove location access
+* Cleanup perm requests in Manifest
+* Remove location, sensor, metrics code from Card & Product ProductScrollingActivity
+* Remove Metrics interface from UserInfo?
 
 
