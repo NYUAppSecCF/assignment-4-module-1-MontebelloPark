@@ -1,7 +1,7 @@
 package com.example.giftcardsite
 
 import android.content.Intent
-import android.net.Uri
+// import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -11,7 +11,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.navigation.fragment.findNavController
+// import androidx.navigation.fragment.findNavController
 import com.example.giftcardsite.api.model.RegisterInfo
 import com.example.giftcardsite.api.model.User
 import com.example.giftcardsite.api.service.UserInterface
@@ -66,11 +66,19 @@ class SecondFragment : Fragment() {
                         loggedInUser = response.body()
                         Log.d("Register Success", "Register success. Boo.")
                         Log.d("Register Success", "Token:" + loggedInUser?.token.toString())
-                        var intent = Intent(Intent.ACTION_VIEW)
-                        intent.type = "text/giftcards_browse"
-                        intent.data = Uri.parse("https://appsec.moyix.net/api/index")
+
+                        // Old implicit intent code
+                        // var intent = Intent(Intent.ACTION_VIEW)
+                        // New explicit intent:
+                        // intent.type = "text/giftcards_browse"
+                        // intent.data = Uri.parse("https://appsec.moyix.net/api/index")
+                        var intent = Intent(activity, ProductScrollingActivity::class.java)
                         intent.putExtra("User", loggedInUser);
                         startActivity(intent)
+
+                        intent.putExtra("User", loggedInUser);
+                        startActivity(intent)
+
                     }
                 }
             })

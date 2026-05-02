@@ -1,0 +1,19 @@
+assignment-4-module-1-MontebelloPark
+
+# Intents:
+## 2nd Fragment (69-73)
+Implicit Intent.ACTION_VIEW - used to access an API? 
+External apps can access
+## 3rd fragment (68-70)
+Explicit (more secure) Intent.putExtra - to access ProductScrollingActivity
+
+# Phase 1
+Cleanup Intents & manifest.
+## Manifest 
+* Remove intent filters & set exported to false
+## Implicit --> Explicit
+* Change var intent in SecondFragment to mirror that in ThirdFragment
+* Cleanup unused imports
+
+
+
