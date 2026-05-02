@@ -20,8 +20,8 @@ jobs:
         distribution: 'temurin'
         cache: gradle
     
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v2
+#    - name: Setup Android SDK
+#      uses: android-actions/setup-android@v2
     - name: cd to code location (GiftcardSite)
       run: cd ./GiftcardSite
     - name: Grant execute permission for gradlew
